@@ -1,9 +1,69 @@
-# Neural Network Basic
+**# Neural Network Basic
  Working neural network taking XOR as an example with Decision boundary
+**# Neural Network from Scratch
 
+A modular neural network implementation built from scratch using NumPy, featuring dense layers, convolutional layers, and various activation functions.
 
+## Features
 
-# Example
+- Dense (fully connected) layers
+- Convolutional layers
+- Activation functions: Tanh, Sigmoid, Softmax
+- Loss functions: MSE, Binary Cross-Entropy
+- Forward and backward propagation
+- XOR problem solver with 3D decision boundary visualization
+- MNIST digit classification
+
+## Installation
+
+```bash
+pip install numpy matplotlib scipy keras
+```
+
+## Usage
+
+### XOR Problem
+```bash
+python nn.py
+```
+Trains a network to solve XOR and displays a 3D decision boundary plot.
+
+### MNIST Classification
+```bash
+python mnist.py          # Dense network
+python mnist_conv.py     # Convolutional network
+```
+
+## Network Architecture
+
+The framework supports building custom networks by stacking layers:
+
+```python
+network = [
+    Dense(2, 3),
+    Tanh(),
+    Dense(3, 1),
+    Tanh()
+]
+```
+
+## Components
+
+- **layer.py** - Base layer class
+- **dense.py** - Fully connected layer
+- **convolutional.py** - 2D convolutional layer
+- **activation.py** - Base activation class
+- **activations.py** - Tanh, Sigmoid, Softmax implementations
+- **losses.py** - Loss functions and derivatives
+- **network.py** - Training and prediction functions
+- **reshape.py** - Reshaping layer for transitioning between conv and dense layers
+
+## Examples
+
+The repository includes working examples for:
+- XOR problem with decision boundary visualization
+- MNIST digit recognition (dense network)
+- Binary MNIST classification (convolutional network)
 
 ```python
 import numpy as np
